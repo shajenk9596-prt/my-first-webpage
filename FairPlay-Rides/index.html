@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- EDIT: the title shown on the browser tab -->
+<title>Shakenya Jenkins | FairPlay Rides</title>
+
+<style>
+/* OPTIONAL: use your real Sprite Graffiti font on every phone.
+   1. Put your font file (for example SpriteGraffiti.woff2) in this same folder.
+   2. Copy the block below OUTSIDE this comment and match the file name:
+
+   @font-face {
+     font-family: "Sprite Graffiti";
+     src: url("SpriteGraffiti.woff2") format("woff2");
+     font-display: swap;
+   }
+*/
+
+/* COLORS: change a color once here and it updates everywhere */
+:root {
+  --blue: #434d57;      /* gray blue: main text */
+  --orange: #e98d31;    /* Game Day Orange: accents */
+  --gray: #90969a;      /* gray: secondary text and placeholders */
+  --page: #d9d9d9;      /* light gray page background (tint) */
+  --card: #fefaf2;      /* light orange card */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;       /* centers the card up and down */
+  justify-content: center;   /* centers the card left and right */
+  padding: 24px 16px;
+  font-family: "Sprite Graffiti", "Trebuchet MS", Verdana, sans-serif;
+  color: var(--blue);
+  /* solid tinted background behind the card */
+  background: var(--page);
+}
+
+/* THE CARD */
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  border-radius: 24px;
+  border-top: 8px solid var(--orange);
+  padding: 36px 24px 40px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(67, 77, 87, 0.15);
+}
+
+/* PROFILE PHOTO (circle) */
+.photo {
+  width: 150px;             /* EDIT: photo width */
+  height: 150px;            /* keep the same as the width so it stays a circle */
+  border-radius: 50%;
+  margin: 0 auto 28px;
+  object-fit: cover;               /* crops instead of stretching */
+  border: 4px solid var(--orange);
+  display: block;
+}
+
+/* NAME (main heading) */
+h1 {
+  margin: 0 0 14px;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--blue);
+}
+
+/* BUSINESS NAME (subheading), with only the letter P in orange */
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.9rem;
+  line-height: 1.4;          /* line spacing 1.4 */
+  letter-spacing: -0.04em;   /* tight letters; make it -0.06em for tighter */
+  font-weight: normal;       /* graffiti font is already heavy */
+  color: var(--blue);
+}
+.p-letter {
+  color: var(--orange);
+  /* small glitch-style shadow on the P. Delete this line for a plain P. */
+  text-shadow: -2px 2px 0 var(--gray);
+}
+
+/* TAGLINE (smaller text) */
+.tagline {
+  margin: 0 0 32px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+/* PHONE AND EMAIL LINKS */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact a {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word;
+}
+.phone {
+  background: var(--orange);
+  color: #fff;
+  font-weight: bold;
+}
+.email {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+/* LOGO (sits below the contact buttons) */
+.logo-wrap {
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 120px;         /* EDIT: logo width */
+  height: auto;         /* keeps the logo's shape, no stretching */
+  max-width: 100%;
+}
+
+/* bigger spacing on desktop */
+@media (min-width: 600px) {
+  .card { padding: 48px 40px 52px; }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+
+  <!-- 1. PROFILE PHOTO -->
+  <!-- EDIT: the photo file name is in src="photo.jpg". Change it if your file is named differently. -->
+  <img class="photo" src="photo.jpg" alt="Photo of Shakenya Jenkins, owner of FairPlay Rides">
+
+  <!-- 2. YOUR NAME (EDIT) -->
+  <h1>Shakenya Jenkins</h1>
+
+  <!-- 3. BUSINESS NAME (EDIT). The P is wrapped in a span so only it is orange. -->
+  <h2>Fair<span class="p-letter">P</span>lay Rides</h2>
+
+  <!-- 4. TAGLINE (EDIT) -->
+  <p class="tagline">Fair prices. Safe rides. Every kid in the game.</p>
+
+  <!-- 5 and 6. PHONE AND EMAIL -->
+  <div class="contact">
+    <!-- EDIT: the phone number appears twice. Change the tel: link AND the visible text. -->
+    <a class="phone" href="tel:+19014602043">+1 901-460-2043</a>
+    <!-- EDIT: the email appears twice. Change the mailto: link AND the visible text. -->
+    <a class="email" href="mailto:shakenyajenkins@gmail.com">shakenyajenkins@gmail.com</a>
+  </div>
+
+  <!-- 7. LOGO (below the contact information) -->
+  <!-- EDIT: the logo file name is in src="logo.png". Change it if your file is named differently. -->
+  <div class="logo-wrap">
+    <img class="logo" src="logo.png" alt="FairPlay Rides logo">
+  </div>
+
+</div>
+</body>
+</html>
